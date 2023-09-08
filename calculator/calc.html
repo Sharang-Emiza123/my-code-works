@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/calculator/style.css">
+<body>
+<input type='text' id='txt'><br/>  
+<div id="btdiv">
+<input type='button' name='1' value='1' onclick='numFunc(this.value)'>
+<input type='button' name='2' value='2' onclick='numFunc(this.value)'>
+<input type='button' name='3' value='3' onclick='numFunc(this.value)'>
+<input type='button' name='AC' value='AC' id='ac' onclick="$('#txt').val('')">
+<input type='button' name='Div' value='/' onclick='opFunc(this.value)'><br>
+<input type='button' name='4' value='4' onclick='numFunc(this.value)'>
+<input type='button' name='5' value='5' onclick='numFunc(this.value)'>
+<input type='button' name='6' value='6' onclick='numFunc(this.value)'>
+<input type='button' name='(' value='(' onclick='numFunc(this.value)'>
+<input type='button' name=')' value=')' onclick='numFunc(this.value)'>
+<input type='button' name='Mul' value='*' onclick='opFunc(this.value)'><br>
+<input type='button' name='7' value='7' onclick='numFunc(this.value)'>
+<input type='button' name='8' value='8' onclick='numFunc(this.value)'>
+<input type='button' name='9' value='9' onclick='numFunc(this.value)'>
+<input type='button' name='Add' value='+' onclick='opFunc(this.value)'><br>
+<input type='button' name='Eql' value='Eql' onclick='eqlFunc()'>
+<input type='button' name='0' value='0' onclick='numFunc(this.value)'>
+<input type='button' name='Del' value='Del' onclick='delFunc()'>
+<input type='button' name='Sub' value='-' onclick='opFunc(this.value)'><br>
+</div>
+<p id='tst'>
+this is some text
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+<script src="/calculator/main.js"></script>
+</html>
