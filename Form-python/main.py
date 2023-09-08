@@ -20,10 +20,6 @@ def getData():
 
 
 
-akjdfhaiudhfkajbdgit branch -d old-branch.
-
-
-
 
 
 
