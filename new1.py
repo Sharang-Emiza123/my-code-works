@@ -12,7 +12,19 @@ for i in list1:
     if i not in list2:
         list2.append(i)
 
-print(df['TransactionDate'])
-print("total products dispatched ",sum(df['TotalDispatched']))        
-print(len(list1))
-print("number of SOs processed -",len(list2))
+# print(df['TransactionDate'])
+
+itemid = []
+
+for i in range(len(df['ItemId'])):
+    itemid.append(df['ItemId'][i])
+
+count = itemid.count('TOR3')
+
+
+print(count)
+print(df['ItemId'][18])
+
+# print("total products dispatched ",sum(df['TotalDispatched']))        
+# print(len(list1))
+# print("number of SOs processed -",len(list2))
