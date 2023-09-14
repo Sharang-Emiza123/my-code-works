@@ -1,8 +1,18 @@
-import pandas
+from collections import OrderedDict
+import pandas as pd, statistics as st
 
-df = pandas.read_excel(r"C:\Users\Emiza\Downloads\mithila Phy Adt 29-08-23.xlsx")
+df = pd.read_excel(r"C:\Users\Emiza\Downloads\SMconsumer-Aug23-SO.xlsx", parse_dates=['TransactionDate'])
 list1 = []
-for i in range(len(df['Row Labels'])-1):
-    list1.append(df['Row Labels'][i])
+list2 = []
+for i in range(len(df['soId'])-1):
+    list1.append(df['soId'][i])
 
-print()
+
+for i in list1:
+    if i not in list2:
+        list2.append(i)
+
+print(df['TransactionDate'])
+print("total products dispatched ",sum(df['TotalDispatched']))        
+print(len(list1))
+print("number of SOs processed -",len(list2))
