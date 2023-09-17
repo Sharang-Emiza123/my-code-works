@@ -2,7 +2,7 @@ from collections import OrderedDict
 import pandas as pd, statistics as st
 
 # df = pd.read_excel(r"C:\Users\Emiza\Downloads\SMconsumer-Aug23-SO.xlsx")
-df = pd.read_excel(r"D:\Users\shara\Downloads\SMconsumer-Aug23-SO.xlsx")
+df = pd.read_excel(r"D:\Users\shara\Downloads\SMconsumer-Aug23-SO.xlsx", parse_dates=['CreatedDate'])
 
 list1 = []
 list2 = []
@@ -14,7 +14,15 @@ for i in list1:
     if i not in list2:
         list2.append(i)
 
-# # print(df['TransactionDate'])
+dates = dict()
+
+for i in range(len(df['soId'])):
+    dates[df['soId'][i]] =  df['CreatedDate'][i]
+
+# print(df['CreatedDate'])
+
+for i, j in dates.items():
+    print("SO with ID - {0} processed on {1}".format(i,j))
 
 # itemid = []
 
@@ -25,7 +33,8 @@ for i in list1:
 
 
 # print(count)
-print(list2)
+print(len(dates.keys()))
+# print(list2)
 
 # print("total products dispatched ",sum(df['TotalDispatched']))        
 # print(len(list1))
