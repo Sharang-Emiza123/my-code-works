@@ -22,7 +22,7 @@ for i in range(len(df['soId'])):
 # print(df['CreatedDate'])
 
 for i, j in dates.items():
-    print("SO with ID - {0} processed on {1}".format(i,j)) 
+    print("SO with ID - {0} processed on {1}".format(i,j))
 
 # itemid = []
 
