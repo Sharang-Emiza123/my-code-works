@@ -1,30 +1,30 @@
-from collections import OrderedDict
 import pandas as pd, statistics as st
 
-df = pd.read_excel(r"C:\Users\Emiza\Downloads\SMconsumer-Aug23-SO.xlsx", parse_dates=['TransactionDate'])
-list1 = []
-list2 = []
-for i in range(len(df['soId'])-1):
-    list1.append(df['soId'][i])
+df = pd.read_csv(r"C:\Users\Emiza\Downloads\SMconsumer-Aug23-SO.csv")
+
+soids = []
+
+for i in range(len(df['soID'])-1):
+    soids.append(df['soID'][i])
+
+itemids = []
+
+for i in range(len(df['ItemId'])-1):
+    itemids.append(df['ItemId'][i])
 
 
-for i in list1:
-    if i not in list2:
-        list2.append(i)
+maxItem = max(itemids, key=itemids.count)
+count = itemids.count(maxItem)
 
-# print(df['TransactionDate'])
-
-itemid = []
+dict1 = dict()
 
 for i in range(len(df['ItemId'])):
-    itemid.append(df['ItemId'][i])
-
-count = itemid.count('TOR3')
+    dict1[df['CreatedDate']]
 
 
-print(count)
-print(df['ItemId'][18])
-
+# print(len(sumofitem.keys()))
 # print("total products dispatched ",sum(df['TotalDispatched']))        
-# print(len(list1))
+print(df['CreatedDate'])
+# print(df['CreatedDate'][0])
+# print("most sold SKU is {0} sold {1} items.".format(maxItem, count)) 
 # print("number of SOs processed -",len(list2))
