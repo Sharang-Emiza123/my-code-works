@@ -5,10 +5,10 @@ import pandas as pd
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/exmgr', methods=['POST', 'GET'])
 def checkking():
     return render_template('ExpenseManager/index.html')
 
-@app.route('/add', methods=['POST', 'GET'])
+@app.route('/exmgr/add', methods=['POST', 'GET'])
 def addExp():
-    return render_template('ExpenseManager/addExpense.html')
+    return render_template('ExpenseManager/addExpense.html')    
