@@ -1,31 +1,29 @@
 #txt {
-    /* color:rgb(8, 71, 8);
-    background-color: rgb(189, 255, 255);
+    color:black;
+    background-color: white;
     font-size:x-large;
     width: auto;
     height: auto;
     border-radius: 7px;
     margin-left: 470px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
     border: 2px solid black;    
     padding: 5px 20px 5px 20px;
- */
+}
 
-color: rgb(0, 0, 0);
-    background-color: rgb(166, 233, 166);
+button {
+    color: white;
+    background-color: rgb(41, 119, 245);
     border-radius: 7px;
     font-size: 16px;
-    width: 140px;
-    height: 40px;
-}
-#btdiv {
-    text-align: center;
+    width: 40px;
+    height: 30px;
 }
 
-input {
+input{
     color: rgb(0, 0, 0);
-    background-color: rgb(166, 233, 166);
+    background-color: rgb(206, 221, 226);
     border-radius: 7px;
     font-size: 16px;
     width: 40px;
