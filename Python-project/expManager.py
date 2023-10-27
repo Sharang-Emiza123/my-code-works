@@ -12,3 +12,6 @@ def checkking():
 @app.route('/exmgr/add', methods=['POST', 'GET'])
 def addExp():
     return render_template('ExpenseManager/addExpense.html')    
+
+if __name__ == '__main__':
+    app.run(debug=True)
