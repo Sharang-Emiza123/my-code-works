@@ -38,14 +38,14 @@
 
 
 
-from pymongo import MongoClient
-client = MongoClient()
+# from pymongo import MongoClient
+# client = MongoClient()
 
-client = MongoClient('localhost', 27017)
+# client = MongoClient('localhost', 27017)
 
-mydatabase = client['MyDB']
+# mydatabase = client['MyDB']
 
-mycollection = mydatabase['employees']
+# mycollection = mydatabase['employees']
 
-for i in mydatabase.employees.find({'firstName':'Vinayak'}):
-    print(i)
+# for i in mydatabase.employees.find({'firstName':'Vinayak'}):
+#     print(i)
