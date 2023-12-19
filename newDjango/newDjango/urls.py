@@ -16,8 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def mainHome(request):
+    return HttpResponse('Project home page !!!')
+
+def lgpg(request):
+    return render(request, 'loginPage.html')
+        
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('playground/', include('playground.urls'))
+    path('playground/', include('playground.urls')),
+    path('', lgpg)
 ]
+

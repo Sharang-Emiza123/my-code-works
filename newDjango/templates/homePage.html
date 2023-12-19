@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+    {% csrf_token %}
+    
+    {% block content %}
+    <p>Home Page</p>
+    <p>Hi {{ data.name }}</p>
+    {% if data.place == 'Mumbai' %}
+    <p>You're from <a href="/playground/new/{{ data.id }}">{{ data.place }}</a></p>
+    {% else %}    
+    <p>You're from <a href="/playground/new/{{ data.id }}">{{ data.place }}</a></p>
+    {% endif %}
+    <p>You're age is {{ data.age }}</a></p>
+    {% endblock content %}
+</body>
+</html>
+
+

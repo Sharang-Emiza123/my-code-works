@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+
+    {% block content %}
+    <h2>{{ data.name }}</h2>
+    <h3>{{ data.famous_for }}</h3>
+    <p>{{ data.description }}</p>
+    {% endblock content %}
+</body>
+</html>
+
+
