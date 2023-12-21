@@ -4,7 +4,7 @@ import openai
 
 # Create your views here.
 
-openai_api_key = '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'
+openai_api_key = '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'
 openai.api_key = openai_api_key
 
 
@@ -17,8 +17,8 @@ def ask_openai(message):
         stop = None,
         temperature = 0.7,
     )
-    print(response)
-    # answer = response.choice[0].text.strip()
+    answer = response.choices[0].text.strip()
+    return answer
 
 def chatbot(request):
     if request.method == 'POST':
