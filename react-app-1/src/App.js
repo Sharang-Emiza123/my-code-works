@@ -5,7 +5,7 @@ import './App.css';
 import MovieCard from "./MovieCard";
 import SearchIcon from './search.svg'
 
-//API_KEY
+//API_KEY check WhatsApp
 
 const API_URL = 'http://www.omdbapi.com/?apikey='
 
